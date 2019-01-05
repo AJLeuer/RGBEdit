@@ -4,8 +4,14 @@
 
 packages/
 
+Debug/
+Release/
+
 RGBEdit/obj/
 RGBEdit/bin/
 
 RGBEdit.NET/obj/
 RGBEdit.NET/bin/
+
+RGBEditNative/Debug
+RGBEditNative/Release

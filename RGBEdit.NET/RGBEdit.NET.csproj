@@ -1,68 +1,87 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-	<PropertyGroup>
-		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-		<ProjectGuid>{155EAC6E-53EA-4A47-8681-7306DED92E84}</ProjectGuid>
-		<OutputType>Exe</OutputType>
-		<AppDesignerFolder>Properties</AppDesignerFolder>
-		<RootNamespace>RGBEdit.NET</RootNamespace>
-		<AssemblyName>RGBEdit.NET</AssemblyName>
-		<TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-		<FileAlignment>512</FileAlignment>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-		<PlatformTarget>AnyCPU</PlatformTarget>
-		<DebugSymbols>true</DebugSymbols>
-		<DebugType>full</DebugType>
-		<Optimize>false</Optimize>
-		<OutputPath>bin\Debug\</OutputPath>
-		<DefineConstants>DEBUG;TRACE</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-		<PlatformTarget>AnyCPU</PlatformTarget>
-		<DebugType>pdbonly</DebugType>
-		<Optimize>true</Optimize>
-		<OutputPath>bin\Release\</OutputPath>
-		<DefineConstants>TRACE</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-	</PropertyGroup>
-	<ItemGroup>
-		<Reference Include="AuraSDKDotNet, Version=1.0.2.0, Culture=neutral, PublicKeyToken=null">
-			<HintPath>..\packages\AuraSDK.1.0.2\lib\AuraSDKDotNet.dll</HintPath>
-			<Private>True</Private>
-		</Reference>
-		<Reference Include="System" />
-		<Reference Include="System.Core" />
-		<Reference Include="System.Data" />
-		<Reference Include="System.Xml" />
-	</ItemGroup>
-	<ItemGroup>
-		<Compile Include="Program.cs" />
-		<Compile Include="Properties\AssemblyInfo.cs" />
-	</ItemGroup>
-	<ItemGroup>
-		<None Include="packages.config" />
-	</ItemGroup>
-	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-	
-	<ItemGroup>
-		<!--<TestDirectoryName Name="Test"/>-->
-		<BuildDependency Include="$(SolutionDir)\Libraries\AuraSDK\**\*.*">
-			<DirectoryName>AuraSDK</DirectoryName>
-		</BuildDependency>
-	</ItemGroup>
-	
-	<Target Name="CopyLibrariesToOutputDirectory" AfterTargets="AfterBuild">
-		<!--<Copy SourceFiles="$(SolutionDir)\Libraries\AURA_SDK.dll" DestinationFolder="$(OutDir)\Libraries\"/>-->
-		<Copy
-			SourceFiles="@(BuildDependency)"
-			DestinationFiles="@(BuildDependency->'$(OutputPath)\Libraries\%(DirectoryName)\%(RecursiveDir)%(Filename)%(Extension)')"
-		/>
-		<!--DestinationFolder="$(OutputPath)\%(RecursiveDir)"-->
-	</Target>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{155EAC6E-53EA-4A47-8681-7306DED92E84}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RGBEdit.NET</RootNamespace>
+    <AssemblyName>RGBEdit.NET</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AuraSDKDotNet, Version=1.0.2.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\AuraSDK.1.0.2\lib\AuraSDKDotNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <BuildDependency Include="C:\Users\AJ\Developer\RGBEdit\Libraries\AuraSDK\test code\AURALightingSDK.h">
+      <DirectoryName>AuraSDK</DirectoryName>
+    </BuildDependency>
+    <BuildDependency Include="C:\Users\AJ\Developer\RGBEdit\Libraries\AuraSDK\test code\AURA_SDK.dll">
+      <DirectoryName>AuraSDK</DirectoryName>
+    </BuildDependency>
+    <BuildDependency Include="C:\Users\AJ\Developer\RGBEdit\Libraries\AuraSDK\test code\ClaymoreProtocol.dll">
+      <DirectoryName>AuraSDK</DirectoryName>
+    </BuildDependency>
+    <BuildDependency Include="C:\Users\AJ\Developer\RGBEdit\Libraries\AuraSDK\test code\EVOLVE SYNC Dll.dll">
+      <DirectoryName>AuraSDK</DirectoryName>
+    </BuildDependency>
+    <BuildDependency Include="C:\Users\AJ\Developer\RGBEdit\Libraries\AuraSDK\test code\LED_DLL_forMB.dll">
+      <DirectoryName>AuraSDK</DirectoryName>
+    </BuildDependency>
+    <BuildDependency Include="C:\Users\AJ\Developer\RGBEdit\Libraries\AuraSDK\test code\RogNewmouseProtocol.dll">
+      <DirectoryName>AuraSDK</DirectoryName>
+    </BuildDependency>
+    <BuildDependency Include="C:\Users\AJ\Developer\RGBEdit\Libraries\AuraSDK\test code\SPATHA HID Library C++.dll">
+      <DirectoryName>AuraSDK</DirectoryName>
+    </BuildDependency>
+    <BuildDependency Include="C:\Users\AJ\Developer\RGBEdit\Libraries\AuraSDK\test code\SPATHA SYNC Dll.dll">
+      <DirectoryName>AuraSDK</DirectoryName>
+    </BuildDependency>
+    <BuildDependency Include="C:\Users\AJ\Developer\RGBEdit\Libraries\AuraSDK\test code\Vender.dll">
+      <DirectoryName>AuraSDK</DirectoryName>
+    </BuildDependency>
+    <BuildDependency Include="C:\Users\AJ\Developer\RGBEdit\Libraries\AuraSDK\test code\VGA_Extra.dll">
+      <DirectoryName>AuraSDK</DirectoryName>
+    </BuildDependency>
+  </ItemGroup>
+  <Target Name="CopyLibrariesToOutputDirectory" AfterTargets="AfterBuild">
+    <Copy SourceFiles="@(BuildDependency)" DestinationFiles="@(BuildDependency->'$(OutputPath)\Libraries\%(DirectoryName)\%(RecursiveDir)%(Filename)%(Extension)')" />
+  </Target>
 </Project>
