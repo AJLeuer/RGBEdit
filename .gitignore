@@ -1,4 +1,11 @@
 
 .idea/
+.vs/
+
+packages/
+
 RGBEdit/obj/
 RGBEdit/bin/
+
+RGBEdit.NET/obj/
+RGBEdit.NET/bin/

@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGBEdit", "RGBEdit\RGBEdit.csproj", "{916823D8-52A8-44FA-BA30-D981F43EACA2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGBEdit.NET", "RGBEdit.NET\RGBEdit.NET.csproj", "{155EAC6E-53EA-4A47-8681-7306DED92E84}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{916823D8-52A8-44FA-BA30-D981F43EACA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{916823D8-52A8-44FA-BA30-D981F43EACA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{916823D8-52A8-44FA-BA30-D981F43EACA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{155EAC6E-53EA-4A47-8681-7306DED92E84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{155EAC6E-53EA-4A47-8681-7306DED92E84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{155EAC6E-53EA-4A47-8681-7306DED92E84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{155EAC6E-53EA-4A47-8681-7306DED92E84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -8,5 +8,8 @@
     <ItemGroup>
       <PackageReference Include="AuraSDK" Version="1.0.2" />
     </ItemGroup>
-
+    
+    <Target Name="CopyLibrariesToOutputDirectory" AfterTargets="AfterBuild">
+        <Copy SourceFiles="$(SolutionDir)\Libraries\AURA_SDK.dll" DestinationFolder="$(OutDir)\Libraries\"/>
+    </Target>
 </Project>
