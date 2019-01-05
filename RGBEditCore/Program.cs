@@ -2,7 +2,7 @@
 using System.IO;
 using AuraSDKDotNet;
 
-namespace RGBEdit
+namespace RGBEditCore
 {
     public static class Program
     {

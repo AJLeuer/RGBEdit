@@ -7,8 +7,8 @@ packages/
 Debug/
 Release/
 
-RGBEdit/obj/
-RGBEdit/bin/
+RGBEditCore/obj/
+RGBEditCore/bin/
 
 RGBEdit.NET/obj/
 RGBEdit.NET/bin/

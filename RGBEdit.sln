@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28407.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RGBEdit", "RGBEdit\RGBEdit.csproj", "{916823D8-52A8-44FA-BA30-D981F43EACA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RGBEditCore", "RGBEditCore\RGBEditCore.csproj", "{916823D8-52A8-44FA-BA30-D981F43EACA2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGBEdit.NET", "RGBEdit.NET\RGBEdit.NET.csproj", "{155EAC6E-53EA-4A47-8681-7306DED92E84}"
 EndProject
