@@ -10,7 +10,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <BuildDependency Include="$(SolutionDir)\Libraries\AuraSDK\**\*.*">
+        <BuildDependency Include="$(SolutionDir)\Libraries\AuraSDK\**\*.*" Visible="false">
             <DirectoryName>AuraSDK</DirectoryName>
         </BuildDependency>
     </ItemGroup>

@@ -49,39 +49,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
   <ItemGroup>
-    <BuildDependency Include="C:\Users\AJ\Developer\RGBEdit\Libraries\AuraSDK\test code\AURALightingSDK.h">
-      <DirectoryName>AuraSDK</DirectoryName>
-    </BuildDependency>
-    <BuildDependency Include="C:\Users\AJ\Developer\RGBEdit\Libraries\AuraSDK\test code\AURA_SDK.dll">
-      <DirectoryName>AuraSDK</DirectoryName>
-    </BuildDependency>
-    <BuildDependency Include="C:\Users\AJ\Developer\RGBEdit\Libraries\AuraSDK\test code\ClaymoreProtocol.dll">
-      <DirectoryName>AuraSDK</DirectoryName>
-    </BuildDependency>
-    <BuildDependency Include="C:\Users\AJ\Developer\RGBEdit\Libraries\AuraSDK\test code\EVOLVE SYNC Dll.dll">
-      <DirectoryName>AuraSDK</DirectoryName>
-    </BuildDependency>
-    <BuildDependency Include="C:\Users\AJ\Developer\RGBEdit\Libraries\AuraSDK\test code\LED_DLL_forMB.dll">
-      <DirectoryName>AuraSDK</DirectoryName>
-    </BuildDependency>
-    <BuildDependency Include="C:\Users\AJ\Developer\RGBEdit\Libraries\AuraSDK\test code\RogNewmouseProtocol.dll">
-      <DirectoryName>AuraSDK</DirectoryName>
-    </BuildDependency>
-    <BuildDependency Include="C:\Users\AJ\Developer\RGBEdit\Libraries\AuraSDK\test code\SPATHA HID Library C++.dll">
-      <DirectoryName>AuraSDK</DirectoryName>
-    </BuildDependency>
-    <BuildDependency Include="C:\Users\AJ\Developer\RGBEdit\Libraries\AuraSDK\test code\SPATHA SYNC Dll.dll">
-      <DirectoryName>AuraSDK</DirectoryName>
-    </BuildDependency>
-    <BuildDependency Include="C:\Users\AJ\Developer\RGBEdit\Libraries\AuraSDK\test code\Vender.dll">
-      <DirectoryName>AuraSDK</DirectoryName>
-    </BuildDependency>
-    <BuildDependency Include="C:\Users\AJ\Developer\RGBEdit\Libraries\AuraSDK\test code\VGA_Extra.dll">
-      <DirectoryName>AuraSDK</DirectoryName>
-    </BuildDependency>
+      <BuildDependency Include="$(SolutionDir)\Libraries\AuraSDK\**\*.*" Visible="false">
+          <DirectoryName>AuraSDK</DirectoryName>
+      </BuildDependency>
   </ItemGroup>
+
   <Target Name="CopyLibrariesToOutputDirectory" AfterTargets="AfterBuild">
-    <Copy SourceFiles="@(BuildDependency)" DestinationFiles="@(BuildDependency->'$(OutputPath)\Libraries\%(DirectoryName)\%(RecursiveDir)%(Filename)%(Extension)')" />
+      <Copy
+              SourceFiles="@(BuildDependency)"
+              DestinationFiles="@(BuildDependency->'$(OutputPath)\Libraries\%(DirectoryName)\%(RecursiveDir)%(Filename)%(Extension)')"
+      />
   </Target>
 </Project>
